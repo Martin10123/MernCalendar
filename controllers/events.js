@@ -17,11 +17,11 @@ const crearEvento = async (req, res = response) => {
   try {
     evento.user = req.uid;
 
-    const enventoGuardado = await evento.save();
+    const eventoGuardado = await evento.save();
 
     res.json({
       ok: true,
-      enventoGuardado,
+      evento: eventoGuardado,
     });
   } catch (error) {
     console.log(error);
